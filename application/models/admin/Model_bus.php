@@ -35,6 +35,16 @@ class Model_bus extends CI_Model{
     return $hasil;
   }
 
+  public function cekDb($key)
+  {
+    $query = $this->db->get_where('bus', $key);
+    if ($query->num_rows()>0) {
+      return true;
+    }else {
+      return false;
+    }
+  }
+
   public function getUpdate($key,$data)
   {
     $this->db->where('id_bus', $key);

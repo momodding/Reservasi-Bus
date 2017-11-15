@@ -40,8 +40,16 @@ class Bus extends CI_Controller{
                   'kelas' => $this->input->post('kelas'),
                   'tarif' => $this->input->post('tarif'),
                   'total_seat' => $this->input->post('seat'));
-    $insert = $this->model_bus->getInsert($data);
-    echo json_encode(array("status" => true));
+    $key['id_bus']   = $this->input->post('bus');
+    $cek = $this->model_bus->cekDb($key);
+    if ($cek == true) {
+      $update = $this->model_bus->getUpdate($key, $data);
+      echo json_encode(array("status" => true));
+    }else {
+      $insert = $this->model_bus->getInsert($data);
+      echo json_encode(array("status" => true));
+    }
+
 
   }
 

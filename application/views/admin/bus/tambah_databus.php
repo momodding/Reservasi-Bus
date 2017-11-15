@@ -15,7 +15,10 @@ function save() {
 </script>
 <script type="text/javascript">
 $(document).ready(function(e) {
-  $('.select2').select2();
+  $('.select2-trayek').select2({
+    placeholder: "Pilih Kode Trayek",
+    allowClear: true
+  });
 
   $('.select2-kelas').select2({
     placeholder: "Pilih kelas Bus",
@@ -45,7 +48,8 @@ $(document).ready(function(e) {
       </div>
       <div class="form-group">
         <label>ID Trayek</label>
-        <select class="form-control select2" name="trayek" style="width: 100%;">
+        <select class="form-control select2-trayek" name="trayek" style="width: 100%;">
+          <option value=""></option>
           <?php
             foreach ($idtrayek->result() as $row) {
            ?>
