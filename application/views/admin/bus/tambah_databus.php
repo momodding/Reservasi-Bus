@@ -8,10 +8,17 @@ function save() {
     data: data,
     dataType: "JSON",
     success: function(data){
-      alert("Data Save: " + data);
+      //alert('Data Sukses Disimpan');
+      swal("Berhasil","Data Sukses Disimpan","success");
+
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+      //alert('Error Tambah data. Cek Kolom kembali atau data sudah ada dalam database');
+      swal("Gagal","Error Tambah data. Cek Kolom kembali atau data sudah ada dalam database", "error");
     }
   });
 }
+
 </script>
 <script type="text/javascript">
 $(document).ready(function(e) {
@@ -59,7 +66,7 @@ $(document).ready(function(e) {
       </div>
       <div class="form-group">
         <label for="NopolBus">Nomor Polisi Bus</label>
-        <input type="text" name="nopol" id="nopol" class="form-control" placeholder="Nomor Polisi Bus" data-inputmask='"mask": "aa 9999 aa"' data-mask>
+        <input type="text" name="nopol" id="nopol" class="form-control" onBlur="javascript:{this.value = this.value.toUpperCase(); }" placeholder="Nomor Polisi Bus" data-inputmask='"mask": "aa 9999 aa"' data-mask>
       </div>
       <div class="form-group">
         <label for="KelasBus">Kelas</label>

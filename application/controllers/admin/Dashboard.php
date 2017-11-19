@@ -9,6 +9,7 @@ class Dashboard extends CI_Controller{
     $isi = array ('title' => 'Halaman Dashboard Admin',
                   'judul' => 'Dashboard',
                   'sub_judul' => '',
+                  'sub_judul2' => '',
                   'content' => 'admin/dashboard/content_dashboard');
     $this->load->view('admin/tampilan_dashboard', $isi);
   }

@@ -37,6 +37,7 @@
   <script src="<?php echo base_url(); ?>assets/js/datatables.net/jquery.dataTables.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/js/datatables.net-bs/dataTables.bootstrap.min.js"></script>
 
+
   <!-- Google Font -->
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -351,8 +352,9 @@
         <small></small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> <?php echo $judul; ?></a></li>
+        <li><a href="<?php echo base_url('admin/'.$judul); ?>"><i class="fa fa-dashboard"></i> <?php echo $judul; ?></a></li>
         <li class="active"><?php echo $sub_judul; ?></li>
+        <li class="active"><?php echo $sub_judul2; ?></li>
       </ol>
     </section>
 
@@ -574,6 +576,8 @@
 <script src="<?php echo base_url(); ?>assets/js/bootstrap/bootstrap.min.js"></script>
 <!-- Select2 -->
 <script src="<?php echo base_url(); ?>assets/js/select2/select2.min.js"></script>
+<!-- Sweetalert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <!-- InputMask -->
 <script src="<?php echo base_url(); ?>assets/js/input-mask/jquery.inputmask.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/input-mask/jquery.inputmask.date.extensions.js"></script>
@@ -591,8 +595,6 @@
 <script src="<?php echo base_url(); ?>assets/js/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- ChartJS -->
 <script src="<?php echo base_url(); ?>assets/js/chartjs/Chart.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?php echo base_url(); ?>assets/js/demo/dashboard2.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url(); ?>assets/js/demo/demo.js"></script>
 </body>

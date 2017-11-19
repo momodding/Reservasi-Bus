@@ -5,8 +5,9 @@ class Model_bus extends CI_Model{
 
   public function getDataBus()
   {
-    $hasil = $this->db->get('bus');
-    return $hasil;
+    $this->db->from('bus');
+    $query = $this->db->get();
+    return $query->result();
   }
 
   public function getJadwalBus()
@@ -17,7 +18,7 @@ class Model_bus extends CI_Model{
 
   public function getTrayekBus()
   {
-    $hasil = $this->db->get('trayek');
+    $hasil = $this->db->get(' trayek');
     return $hasil;
   }
 
@@ -34,26 +35,23 @@ class Model_bus extends CI_Model{
     }
     return $hasil;
   }
-
-  public function cekDb($key)
-  {
-    $query = $this->db->get_where('bus', $key);
-    if ($query->num_rows()>0) {
-      return true;
-    }else {
-      return false;
-    }
-  }
-
-  public function getUpdate($key,$data)
-  {
-    $this->db->where('id_bus', $key);
-    $this->db->update('bus', $data);
-  }
-
   public function getInsert($data)
   {
     $this->db->insert('bus', $data);
+    return $this->db->insert_id();
+  }
+
+  public function getBusId($key)
+  {
+    $this->db->from('bus');
+    $this->db->where('id_bus', $key);
+    $query = $this->db->get();
+    return $query->row();
+  }
+  public function delById($key)
+  {
+    $this->db->where('id_bus', $key);
+    $this->db->delete('bus');
   }
 
 }

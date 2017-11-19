@@ -2,36 +2,28 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Bus extends CI_Controller{
-
+  public function __construct()
+  {
+    parent::__construct();
+    $this->load->model('admin/model_bus');
+  }
 
   function index()
-  {
-    $this->load->model('admin/model_bus');
+  {    
     //$this->model_security->getSecurity();
     $isi = array ('title' => 'Halaman Dashboard Admin - Bus',
                   'judul' => 'Bus',
                   'sub_judul' => 'Data Bus',
+                  'sub_judul2' => '',
                   'content' => 'admin/bus/data_bus',
-                  'data' => $this->model_bus->getDataBus());
-    $this->load->view('admin/tampilan_dashboard', $isi);
-  }
-
-  public function tambah()
-  {
-    $this->load->model('admin/model_bus');
-    //$this->model_security->getSecurity();
-    $isi = array ('title' => 'Halaman Dashboard Admin - Bus',
-                  'judul' => 'Bus',
-                  'sub_judul' => 'Tambah Data Bus',
-                  'content' => 'admin/bus/tambah_databus',
-                  'idbus' => $this->model_bus->getDataBus(),
+                  'data' => $this->model_bus->getDataBus(),
                   'idtrayek' => $this->model_bus->getTrayekBus());
     $this->load->view('admin/tampilan_dashboard', $isi);
   }
 
+
   public function simpan()
   {
-    $this->load->model('admin/model_bus');
     //$this->model_security->getSecurity();
 
     $data = array ('id_bus' => $this->input->post('bus'),
@@ -40,17 +32,21 @@ class Bus extends CI_Controller{
                   'kelas' => $this->input->post('kelas'),
                   'tarif' => $this->input->post('tarif'),
                   'total_seat' => $this->input->post('seat'));
-    $key['id_bus']   = $this->input->post('bus');
-    $cek = $this->model_bus->cekDb($key);
-    if ($cek == true) {
-      $update = $this->model_bus->getUpdate($key, $data);
-      echo json_encode(array("status" => true));
-    }else {
-      $insert = $this->model_bus->getInsert($data);
-      echo json_encode(array("status" => true));
-    }
 
+    $insert = $this->model_bus->getInsert($data);
+    echo json_encode(array("status" => true)); 
+  }
 
+  public function edit($key)
+  {
+    $data = $this->model_bus->getBusId($key);
+    echo json_encode($data);
+  }
+
+  public function delete($key)
+  {
+    $this->model_bus->delById($key);
+    echo json_encode(array("status" => true));
   }
 
 }
