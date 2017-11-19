@@ -49,4 +49,16 @@ class Bus extends CI_Controller{
     echo json_encode(array("status" => true));
   }
 
+  public function update()
+  {
+    $data = array ('id_bus' => $this->input->post('bus'),
+                  'id_trayek' => $this->input->post('trayek'),
+                  'nopol_bus' => $this->input->post('nopol'),
+                  'kelas' => $this->input->post('kelas'),
+                  'tarif' => $this->input->post('tarif'),
+                  'total_seat' => $this->input->post('seat'));
+    $this->model_bus->getupdate(array('id_bus' => $this->input->post('bus')), $data);
+    echo json_encode(array("status" => true));
+  }
+
 }

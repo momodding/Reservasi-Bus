@@ -41,6 +41,12 @@ class Model_bus extends CI_Model{
     return $this->db->insert_id();
   }
 
+  public function getupdate($where, $data)
+  {
+    $this->db->update('bus', $data, $where);
+    return $this->db->affected_rows();
+  }
+
   public function getBusId($key)
   {
     $this->db->from('bus');
