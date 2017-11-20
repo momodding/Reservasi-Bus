@@ -170,8 +170,10 @@ function save() {
     success: function(data){
       //alert('Data Sukses Disimpan');
       $('#modal-default').modal('hide');
-      location.reload();
       swal("Berhasil","Data Sukses Disimpan","success");
+      window.setTimeout(function(){ 
+            location.reload();
+        } ,3000);
     },
     error: function(jqXHR, textStatus, errorThrown) {
       //alert('Error Tambah data. Cek Kolom kembali atau data sudah ada dalam database');
@@ -209,20 +211,32 @@ function edit_bus(key) {
 }
 
 function delete_bus(key) {
-  if (confirm('Are u sure want to delete this data?')) {
+  swal({
+          title: "Are you sure?",
+          text: "Once deleted, you will not be able to recover this data!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        })
+        .then((willDelete) => {
+  if (willDelete) {
     $.ajax({
       url: '<?php echo base_url(); ?>admin/bus/delete/'+key,
       type: "POST",
       dataType: "JSON",
       success: function (data) {
         swal("Berhasil","Data Sukses Dihapus","success");
-        location.reload();        
+        window.setTimeout(function(){ 
+            location.reload();
+        } ,3000);
+        //location.reload();        
       },
       error: function (jqXHR, textStatus, errorThrown) {
         swal('Error ambil data');
       }
     });
   }
+});
 }
 
 </script>
