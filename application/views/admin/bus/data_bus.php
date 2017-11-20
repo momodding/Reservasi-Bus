@@ -141,6 +141,7 @@
 //Ajax Function
   var form_method;
   var tabel;
+ 
 function add_bus() {
   form_method = 'insert';
   $('#bus-form')[0].reset();
@@ -182,6 +183,8 @@ function save() {
 
 function edit_bus(key) {
   form_method = 'update';
+  $('#trayek').select2();
+  $('#kelas').select2();
   $('#bus-form')[0].reset();
   $.ajax({
     url: '<?php echo base_url(); ?>admin/bus/edit/'+key,
@@ -192,11 +195,10 @@ function edit_bus(key) {
       $('#modal-title').text('Edit Bus');
 
       $('#bus').val(data.id_bus);
-      $('#trayek').val(data.id_trayek).trigger('change');
-      //$('#trayek').select2("val",data.id_trayek);
+      $('.select2-trayek').val(data.id_trayek).trigger("change");
       $('#nopol').val(data.nopol_bus);
-      $('#kelas').val(data.kelas).trigger('change');
-      //$('#kelas').select2("val",data.kelas);
+      $('#kelas').val('data.kelas').trigger('change');
+      $('.select2-kelas').val(data.kelas).trigger("change");
       $('#tarif').val(data.tarif);
       $('#seat').val(data.total_seat);
     },
