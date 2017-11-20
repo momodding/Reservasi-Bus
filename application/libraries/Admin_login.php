@@ -39,6 +39,15 @@ class Admin_login {
 		return false;
 	}
 
+	public function getSecurity()
+  {
+    $username = $this->CI->session->userdata('username');
+    if (empty($username)) {
+      $this->CI->session->sess_destroy();
+      redirect(base_url().'login');
+    }
+  }
+
 	// Logout
 	public function logout() {
 		$this->CI->session->unset_userdata('username');

@@ -5,7 +5,7 @@ class Dashboard extends CI_Controller{
 
   function index()
   {
-    //$this->model_security->getSecurity();
+    $this->admin_login->getSecurity();
     $isi = array ('title' => 'Halaman Dashboard Admin',
                   'judul' => 'Dashboard',
                   'sub_judul' => '',

@@ -5,8 +5,8 @@ class Trayek extends CI_Controller{
 
   function index()
   {
+    $this->admin_login->getSecurity();
     $this->load->model('admin/model_bus');
-    //$this->model_security->getSecurity();
     $isi = array ('title' => 'Halaman Dashboard Admin - Bus',
                   'judul' => 'Bus',
                   'sub_judul' => 'Trayek Bus',

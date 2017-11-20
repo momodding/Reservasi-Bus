@@ -10,7 +10,7 @@ class Bus extends CI_Controller{
 
   function index()
   {    
-    //$this->model_security->getSecurity();
+    $this->admin_login->getSecurity();
     $isi = array ('title' => 'Halaman Dashboard Admin - Bus',
                   'judul' => 'Bus',
                   'sub_judul' => 'Data Bus',
@@ -24,8 +24,7 @@ class Bus extends CI_Controller{
 
   public function simpan()
   {
-    //$this->model_security->getSecurity();
-
+    $this->admin_login->getSecurity();
     $data = array ('id_bus' => $this->input->post('bus'),
                   'id_trayek' => $this->input->post('trayek'),
                   'nopol_bus' => $this->input->post('nopol'),
@@ -39,18 +38,21 @@ class Bus extends CI_Controller{
 
   public function edit($key)
   {
+    $this->admin_login->getSecurity();
     $data = $this->model_bus->getBusId($key);
     echo json_encode($data);
   }
 
   public function delete($key)
   {
+    $this->admin_login->getSecurity();
     $this->model_bus->delById($key);
     echo json_encode(array("status" => true));
   }
 
   public function update()
   {
+    $this->admin_login->getSecurity();
     $data = array ('id_bus' => $this->input->post('bus'),
                   'id_trayek' => $this->input->post('trayek'),
                   'nopol_bus' => $this->input->post('nopol'),
