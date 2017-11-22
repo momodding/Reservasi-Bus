@@ -1,0 +1,485 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,800,800italic,900,900italic);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+/* ==========================================================
+        Navbar Styles
+   ==========================================================*/
+
+
+   body {
+       font-family: 'Poppins', sans-serif;
+   }
+
+   strong {
+       font-weight: 600;
+       color: #333;
+   }
+
+   a {
+       -webkit-transition: all 0.3s;
+       -o-transition: all 0.3s;
+       transition: all 0.3s;
+   }
+
+   /* Navigation */
+   .navbar {
+     margin-bottom: 0;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+     text-transform: uppercase;
+     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+     background-color: #35404f;
+     z-index: 19999;
+   }
+   .navbar-brand {
+     font-weight: 700;
+   }
+   .navbar-brand:focus {
+     outline: none;
+   }
+   .navbar-custom a {
+     color: #f4f4f4;
+   }
+   .navbar-custom .nav li a {
+     -webkit-transition: background 0.3s ease-in-out;
+     -moz-transition: background 0.3s ease-in-out;
+     transition: background 0.3s ease-in-out;
+   }
+   .navbar-custom .nav li a:hover {
+     outline: none;
+     background-color: rgba(255, 255, 255, 0.2);
+   }
+   .navbar-toggle {
+     padding: 4px 6px;
+     font-size: 16px;
+     color: #f4f4f4;
+   }
+   @media (min-width: 767px) {
+     .navbar {
+       padding: 20px 0;
+       border-bottom: none;
+       background: transparent;
+       -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+       -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+       transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+     }
+     .top-nav-collapse {
+       padding: 0;
+       background-color: #35404f;
+     }
+     .nav-custom.top-nav-collapse {
+       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+     }
+   }
+/* ==========================================================
+        Carousel Styles
+   ==========================================================*/
+.search{color:#000;font-weight:700;}
+.btn-block{background:transparent!important;padding:7px 0px 5px 0px!important;}
+.btn-primary{background-color:#fff!important;color:#555!important;border-color:transparent!important;}
+.btn-primary:hover{background-color:#ddd !important;border-color:transparent!important;}
+.form-control{height:37px!important;border-radius:0px!important;background:transparent!important;color:#fff!important;}
+
+
+
+ /*.search {
+    margin-top: -10%;
+}*/
+.search .form-section{
+  background:rgba(0, 0, 0, 0.71);
+	border: 2px solid #414141;
+	border-radius: 5px;
+	padding: 10px 20px;
+}
+.serchtile{
+    color:#fff;
+    margin-bottom: 5px;
+}
+.serchtile-2{
+    color:#000;
+    margin-bottom: 5px;
+}
+.search-form{
+    padding-top: 30px;
+}
+
+#myCarousel {
+    height: 580px;
+}
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+/* The controlsy */
+.carousel-control {
+    top: 50% !important;
+  left: -12px;
+    height: 40px !important;
+  width: 40px !important;
+    background: none repeat scroll 0 0 #222222;
+    border: 4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    /*margin-top: 90px;*/
+    font-size: 22px !important;
+}
+.carousel-control.left {
+  left: 30px !important;
+}
+.carousel-control.right {
+  right: 30px !important;
+}
+
+.carousel-caption {
+    padding-bottom: 130px !important;
+     opacity: 0;
+   }
+
+.carousel .carousel-inner .item .carousel-caption {
+    opacity: 0;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s;
+        -ms-transition: 2s all ease-in-out .1s;
+         -o-transition: 2s all ease-in-out .1s;
+            transition: 2s all ease-in-out .1s;
+}
+.carousel .carousel-inner .item.active .carousel-caption {
+    opacity: 1;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s;
+        -ms-transition: 2s all ease-in-out .1s;
+         -o-transition: 2s all ease-in-out .1s;
+            transition: 2s all ease-in-out .1s;
+}
+.carousel-caption h2 {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.carousel-buttons {
+  z-index: 1100;
+  position: absolute;
+  width: 100%;
+  color:#fff;
+  bottom:35px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px){
+  .carousel-caption h2 {font-size: 2.6em;}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+  .carousel-control.left {left: 10px !important;}
+  .carousel-control.right {right: 10px !important;}
+  .carousel-caption h2 {font-size: 2.2em;}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px){
+  #myCarousel {height: 361px;}
+  .carousel-control.left {left: 5px !important;}
+.carousel-control.right {right: 5px !important;}
+.carousel-caption {padding-bottom: 50px !important;}
+ .search { margin-top: 0%;}
+ .carousel-caption h2 {font-size: 2em;}
+}
+
+/* ==========================================================
+        Select2 Styles
+   ==========================================================*/
+.js-select2-asal .js-select2-tujuan{
+  width: 100%;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+  background: #465fc7 !important;
+}
+.select2-container--default .select2-results__option[aria-selected=true]{
+    background: #465fc7;
+    color: #fff;
+    opacity: 0.8;
+}
+.select2-container--open .select2-dropdown--below,
+.select2-container--open .select2-dropdown--above{
+  background: #6d7fcc;
+  color: #000;
+}
+.select2-dropdown {
+  z-index: 9001;
+}
+
+
+/* ==========================================================
+        Card Styles
+   ==========================================================*/
+   .card {
+     background: #fff;
+     border-radius: 2px;
+     display: inline-block;
+     height: 400px;
+     width: 300px;
+     margin-left: 30px;
+   }
+
+   .wrapper-card{
+     width: 200px;
+     height: 280px;
+   }
+
+   .card-1 {
+     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+     padding: 50px;
+   }
+
+   .card-1:hover {
+     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   }
+
+   /* ==========================================================
+           Footer Styles
+      ==========================================================*/
+
+       /* myfooter */
+
+   .myfooter {
+       padding: 50px 0 20px 0;
+       background-color: #35404f;
+       color: #878c94;
+   }
+
+   .myfooter .title-widget {
+   	text-align: left;
+   	color:#fff;
+   	font-size: 25px;
+   	font-weight: 300;
+   	line-height: 1;
+   	position: relative;
+   	text-transform: uppercase;
+   	font-family: 'Fjalla One', sans-serif;
+   	margin-top: 0;
+   	margin-right: 0;
+   	margin-bottom: 25px;
+   	margin-left: 0;
+   	padding-left: 28px;
+   }
+
+   .myfooter .title-widget::before {
+       background-color: #ea5644;
+       content: "";
+       height: 22px;
+       left: 0px;
+       position: absolute;
+       top: -2px;
+       width: 5px;
+   }
+
+   .myfooter .social-icon{padding:0px;margin:0px;}
+   .myfooter .social-icon a{display:inline-block;color:#fff;font-size:25px;padding:5px;}
+   .myfooter .acount-icon a{display:block;color:#fff;font-size:18px;padding:5px;text-decoration:none;}
+   .myfooter .acount-icon .fa{margin-right:25px;}
+
+
+   .myfooter .category a {
+       text-decoration: none;
+       color: #fff;
+       display: inline-block;
+       padding: 5px 20px;
+       margin: 1px;
+       border-radius:4px;
+       margin-top: 6px;
+       background-color: black;
+       border: solid 1px #fff;
+   }
+   .myfooter ul {
+   	font-size: 13px;
+   	list-style-type: none;
+   	margin-left: 0;
+   	padding-left: 0;
+   	margin-top: 15px;
+   	color: #7F8C8D;
+   }
+
+
+   .myfooter .payment{margin:0px;padding:0px;list-style-type:none}
+   .myfooter .payment li{list-style-type:none}
+   .myfooter .payment li a {
+       text-decoration: none;
+       display: inline-block;
+       color: #fff;
+       float: left;
+       font-size: 25px;
+       padding: 10px 10px;
+   }
+
+   .myfooter ul.social {
+   	list-style: none;
+   	display: inline;
+   	margin-left:0 !important;
+   	padding: 0;
+   }
+   .myfooter ul.social li {
+   	display: inline;
+   	margin: 0 5px;
+   }
+   .myfooter .social li:hover {
+   	transform: scale(1.15) rotate(360deg);
+   	-webkit-transform: scale(1.1) rotate(360deg);
+   	-moz-transform: scale(1.1) rotate(360deg);
+   	-ms-transform: scale(1.1) rotate(360deg);
+   	-o-transform: scale(1.1) rotate(360deg);
+   }
+
+   .myfooter .social a.icoRss:hover {
+   	background-color: #F56505;
+   }
+   .myfooter .social a.icoFacebook:hover {
+   	background-color:#3B5998;
+   }
+   .myfooter .social a.icoTwitter:hover {
+   	background-color:#33ccff;
+   }
+   .myfooter .social a.icoGoogle:hover {
+   	background-color:#BD3518;
+   }
+   .myfooter .social a.icoVimeo:hover {
+   	background-color:#0590B8;
+   }
+   .myfooter .social a.icoLinkedin:hover {
+   	background-color:#007bb7;
+   }
+   .myfooter .social a.icoRss:hover i, .myfooter .social a.icoFacebook:hover i, .myfooter .social a.icoTwitter:hover i,
+   .myfooter .social a.icoGoogle:hover i, .myfooter .social a.icoVimeo:hover i, .myfooter .social a.icoLinkedin:hover i {
+   	color:#fff;
+   }
+   a.myfooter .socialIcon:hover, .myfooter .socialHoverClass {
+   	color:#44BCDD;
+   }
+
+   .myfooter .social-circle li a {
+   	display:inline-block;
+   	position:relative;
+   	margin:0 auto 0 auto;
+   	-moz-border-radius:50%;
+   	-webkit-border-radius:50%;
+   	border-radius:50%;
+   	text-align:center;
+   	width: 50px;
+   	height: 50px;
+   	font-size:20px;
+   }
+   .myfooter .social-circle li i {
+   	margin:0;
+   	line-height:50px;
+   	text-align: center;
+   }
+
+   .myfooter .social-circle li a:hover i, .triggeredHover {
+   	-moz-transform: rotate(360deg);
+   	-webkit-transform: rotate(360deg);
+   	-ms--transform: rotate(360deg);
+   	transform: rotate(360deg);
+   	-webkit-transition: all 0.2s;
+   	-moz-transition: all 0.2s;
+   	-o-transition: all 0.2s;
+   	-ms-transition: all 0.2s;
+   	transition: all 0.2s;
+   }
+   .myfooter .social-circle i {
+   	color: #fff;
+   	-webkit-transition: all 0.8s;
+   	-moz-transition: all 0.8s;
+   	-o-transition: all 0.8s;
+   	-ms-transition: all 0.8s;
+   	transition: all 0.8s;
+   }
+
+   .myfooter-bottom {
+   	background: #E3E3E3;
+   	border-top: 1px solid #DDDDDD;
+   	padding-top: 10px;
+   	padding-bottom: 10px;
+   }
+   .myfooter-bottom p.pull-left {
+   	padding-top: 6px;
+   }
+   .payments {
+   	font-size: 1.5em;
+   }
+   /*  zooming class */
+
+
+   .zoom:hover {
+        -webkit-transform: scale(1.4);
+        -moz-transform: scale(1.4);
+        -o-transform: scale(1.4);
+    }
+   .zoom {
+        -webkit-transform: scale(1);
+        /* Browser Variations: */
+
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -webkit-transition-duration: 0.3s;
+        -moz-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+    }
+/* ==========================================================
+        Collpase Panel Styles
+   ==========================================================*/
+
+    .accordion-menu .panel-body{padding:0px; margin:0px;}
+    .accordion-menu .panel-heading{background-color:#FFFFFF;}
+    .accordion-menu .panel-heading:hover{
+      background:#f5f5f5;
+    }
+
+    .accordion-menu .panel{
+    	-webkit-border-radius: 3px;
+    	-moz-border-radius: 3px;
+    	border-radius: 3px;
+      box-shadow: 0 0px 0px rgba(0, 0, 0, 0.05);}
+
+    .glyphicon-icon-rpad .glyphicon,.glyphicon-icon-rpad .glyphicon.m8,.fa-icon-rpad .fa,.fa-icon-rpad .fa.m8{ padding-right:8px; }
+    .glyphicon-icon-lpad .glyphicon,.glyphicon-icon-lpad .glyphicon.m8,.fa-icon-lpad .fa,.fa-icon-lpad .fa.m8{ padding-left:8px; }
+    .glyphicon-icon-rpad .glyphicon.m5,.fa-icon-rpad .fa.m5{ padding-right:5px; }
+    .glyphicon-icon-lpad .glyphicon.m5,.fa-icon-lpad .fa.m5{ padding-left:5px; }
+    .glyphicon-icon-rpad .glyphicon.m12,.fa-icon-rpad .fa.m12{ padding-right:12px; }
+    .glyphicon-icon-lpad .glyphicon.m12,.fa-icon-lpad .fa.m12{ padding-left:12px; }
+    .glyphicon-icon-rpad .glyphicon.m15,.fa-icon-rpad .fa.m15{ padding-right:15px; }
+    .glyphicon-icon-lpad .glyphicon.m15,.fa-icon-lpad .fa.m15{ padding-left:15px; }
+
+    .accordion-menu h4{position:relative;}
+
+    .accordion-menu h4 .accordion-menu-collapsible-icon{position:absolute; right:0px; top:5px; font-size:9px; }
+    .accordion-menu h4 a{display:block; color:#666666;}
+    .accordion-menu h4 a.active,.accordion-menu h4 .active, .active{text-decoration:none;}
+    .accordion-menu h4 a:hover,
+    .accordion-menu h4 a:focus{text-decoration:none; color:#222222;}
+    .accordion-menu h4 .accordion-menu-title-icon
+    {
+      float:right;
+      margin:0;
+    }
+    .accordion-menu ul{list-style:none; padding:0px; margin:0px;}
+    .accordion-menu ul li .badge,.accordion-menu ul li span.badge,.accordion-menu ul li label.badge{float:right}
+    .accordion-menu ul li:first-child a{}
+    .accordion-menu ul li:last-child a{border:0px solid #f9f9f9;}
+    .accordion-menu ul li a{display:block; line-height:22px; padding:5px 15px; margin:0px; border-bottom:1px solid #e8e8e8;}
+    .accordion-menu ul li a:hover{color:#232323;text-decoration:none;}
+    .accordion-menu ul.bullets{list-style:inside disc}
+    .accordion-menu ul.numerics{list-style:inside decimal}
+    .accordion-menu ul.kas-icon{}
+    .accordion-menu ul.kas-icon-aero li a:before{font-family: 'Glyphicons Halflings'; font-size:9px; content: "\e258"; padding-right:8px; }
