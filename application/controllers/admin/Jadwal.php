@@ -9,8 +9,7 @@ class Jadwal extends CI_Controller{
     $this->load->model('admin/model_bus');
     $isi = array ('title' => 'Halaman Dashboard Admin - Bus',
                   'judul' => 'Bus',
-                  'sub_judul' => 'Jadwal Bus',
-                  'sub_judul2' => '',
+                  'sub_judul' => '<li class="active"> Jadwal Bus</li>',
                   'content' => 'admin/bus/jadwal_bus',
                   'data' => $this->model_bus->getJadwalBus());
     $this->load->view('admin/tampilan_dashboard', $isi);

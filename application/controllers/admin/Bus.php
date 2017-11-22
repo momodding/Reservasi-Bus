@@ -13,8 +13,7 @@ class Bus extends CI_Controller{
     $this->admin_login->getSecurity();
     $isi = array ('title' => 'Halaman Dashboard Admin - Bus',
                   'judul' => 'Bus',
-                  'sub_judul' => 'Data Bus',
-                  'sub_judul2' => '',
+                  'sub_judul' => '<li class="active"> Data Bus</li>',
                   'content' => 'admin/bus/data_bus',
                   'data' => $this->model_bus->getDataBus(),
                   'idtrayek' => $this->model_bus->getTrayekBus());

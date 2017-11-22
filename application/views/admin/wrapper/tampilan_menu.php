@@ -8,7 +8,7 @@
   </li>
   <li class="treeview">
     <a href="#">
-      <i class="fa fa-pie-chart"></i>
+      <i class="fa fa-bus"></i>
       <span>Bus</span>
       <span class="pull-right-container">
         <i class="fa fa-angle-left pull-right"></i>
@@ -22,7 +22,7 @@
   </li>
   <li class="treeview">
     <a href="#">
-      <i class="fa fa-pie-chart"></i>
+      <i class="fa fa-users"></i>
       <span>Penumpang</span>
       <span class="pull-right-container">
         <i class="fa fa-angle-left pull-right"></i>
@@ -34,7 +34,7 @@
   </li>
   <li class="treeview">
     <a href="#">
-      <i class="fa fa-pie-chart"></i>
+      <i class="fa fa-home"></i>
       <span>Pool</span>
       <span class="pull-right-container">
         <i class="fa fa-angle-left pull-right"></i>

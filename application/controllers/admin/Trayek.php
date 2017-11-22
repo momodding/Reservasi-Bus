@@ -9,8 +9,7 @@ class Trayek extends CI_Controller{
     $this->load->model('admin/model_bus');
     $isi = array ('title' => 'Halaman Dashboard Admin - Bus',
                   'judul' => 'Bus',
-                  'sub_judul' => 'Trayek Bus',
-                  'sub_judul2' => '',
+                  'sub_judul' => '<li class="active"> Trayek Bus</li>',
                   'content' => 'admin/bus/trayek_bus',
                   'data' => $this->model_bus->getTrayekBus());
     $this->load->view('admin/tampilan_dashboard', $isi);

@@ -353,8 +353,7 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="<?php echo base_url('admin/'.$judul); ?>"><i class="fa fa-dashboard"></i> <?php echo $judul; ?></a></li>
-        <li class="active"><?php echo $sub_judul; ?></li>
-        <li class="active"><?php echo $sub_judul2; ?></li>
+        <?php echo $sub_judul; ?>
       </ol>
     </section>
 
